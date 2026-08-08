@@ -15,8 +15,7 @@ export default async function AdminDashboard() {
     safeCount(() => prisma.provider.count({ where: { enabled: true } })),
     safeCount(() => prisma.paymentGateway.count({ where: { enabled: true } })),
     safeCount(() => prisma.newsPost.count({ where: { status: "PENDING_APPROVAL" } })),
-  ]);
-
+ 
   const cards = [
     { label: "Customers", value: customers },
     { label: "Open Tickets", value: tickets },
